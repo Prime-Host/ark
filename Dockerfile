@@ -15,13 +15,11 @@ ENV SERVERPASSWORD ""
 # Admin password
 ENV ADMINPASSWORD "adminpassword"
 # Nb Players
-ENV NBPLAYERS 70
+ENV NBPLAYERS 200
 # If the server is updating when start with docker start
 ENV UPDATEONSTART 1
 # if the server is backup when start with docker start
-ENV BACKUPONSTART 1
-#  Tag on github for ark server tools
-ENV GIT_TAG v1.5
+ENV BACKUPONSTART 0
 # Server PORT (you can't remap with docker, it doesn't work)
 ENV SERVERPORT 27015
 # Steam port (you can't remap with docker, it doesn't work)
@@ -50,7 +48,6 @@ RUN mkdir  /ark
 # We use the git method, because api github has a limit ;)
 RUN  git clone https://github.com/FezVrasta/ark-server-tools.git /home/steam/ark-server-tools
 WORKDIR /home/steam/ark-server-tools/
-RUN  git checkout $GIT_TAG 
 # Install 
 WORKDIR /home/steam/ark-server-tools/tools
 RUN chmod +x install.sh 
