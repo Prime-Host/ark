@@ -10,7 +10,7 @@
 0 * * * * arkmanager update --update-mods --warn
 # Example : backup every 15min
 # */15 * * * * arkmanager backup
-# Example : backup every day at midnight
-# 0 0 * * * arkmanager backup
+# Example : backup every day at 04:00
+0 4 * * * arkmanager backup
 # WARNING : the container timezone is maybe not your current timezone
 #           You can sync them with option -v /etc/localtime:/etc/localtime:ro or -e "TZ=UTC"
