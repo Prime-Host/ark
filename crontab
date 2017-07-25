@@ -7,7 +7,7 @@
 # |  |  |  |  | 
 # *  *  *  *  *  user command to be executed 
 # Example : update every hour
-# 0 * * * * arkmanager update
+0 * * * * arkmanager update --update-mods --warn
 # Example : backup every 15min
 # */15 * * * * arkmanager backup
 # Example : backup every day at midnight
