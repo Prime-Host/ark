@@ -7,10 +7,10 @@
 # |  |  |  |  | 
 # *  *  *  *  *  user command to be executed 
 # Example : update every hour
-0 * * * * arkmanager update --update-mods --warn
+0 * * * * arkmanager update --warn --update-mods >> /ark/log/crontab.log 2>&1
 # Example : backup every 15min
 # */15 * * * * arkmanager backup
 # Example : backup every day at 04:00
-0 4 * * * arkmanager backup
+# 0 4 * * * arkmanager backup
 # WARNING : the container timezone is maybe not your current timezone
 #           You can sync them with option -v /etc/localtime:/etc/localtime:ro or -e "TZ=UTC"
