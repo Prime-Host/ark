@@ -74,4 +74,4 @@ VOLUME  /ark
 WORKDIR /ark
 
 # Update game launch the game.
-ENTRYPOINT ["/home/steam/user.sh"]
+ENTRYPOINT ["/bin/bash", "/home/steam/user.sh"]
